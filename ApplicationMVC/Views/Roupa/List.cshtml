@@ -1,14 +1,22 @@
 ﻿@model IEnumerable<ApplicationMVC.Models.Roupa>
 
 <div>
-    <h2>Todos as Roupas</h2>
+    <h1 align="center">Todas as Roupas</h1>
 </div>
 
-@foreach (var roupa in Model)
-{
-    <div>
-        <h4>@roupa.NomeRoupa</h4>
-        <p><img src="@roupa.ImagemUrl" /></p>
-        <h3>Preço: @roupa.PrecoRoupa.ToString("c")</h3>
+<hr />
+<br />
+
+<div class="container">
+    <div class="row">
+        @foreach (var roupa in Model)
+        {
+            <div align="center" class="col-sm-4 col-md-4 col-lg-4">
+                <h4>@roupa.NomeRoupa</h4>
+                <p><img src="@roupa.ImagemUrl" class="img-fluid" width="200" /></p>
+                <h5>Preço: @roupa.PrecoRoupa.ToString("c")</h5>
+                <h6>@roupa.DescricaoRoupa</h6>
+            </div>
+        }
     </div>
-}
+</div>
