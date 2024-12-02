@@ -48,6 +48,6 @@ namespace ApplicationMVC.Models
         [Column("ID_CATEGORIA")]
         public Guid CategoriaId { get; set; }
 
-        public Categoria Categoria { get; set; }
+        public virtual Categoria Categoria { get; set; }
     }
 }

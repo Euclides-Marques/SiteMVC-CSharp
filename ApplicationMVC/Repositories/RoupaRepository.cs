@@ -18,7 +18,7 @@ namespace ApplicationMVC.Repositories
 
         public Roupa GetRoupaById(Guid RoupaId)
         {
-            return _context.Roupas.FirstOrDefault(l => l.Equals(RoupaId));
+            return _context.Roupas.FirstOrDefault(l => l.RoupaId.Equals(RoupaId));
         }
     }
 }

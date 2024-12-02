@@ -1,0 +1,14 @@
+﻿@model IEnumerable<ApplicationMVC.Models.Roupa>
+
+<div>
+    <h2>Todos as Roupas</h2>
+</div>
+
+@foreach (var roupa in Model)
+{
+    <div>
+        <h4>@roupa.NomeRoupa</h4>
+        <p><img src="@roupa.ImagemUrl" /></p>
+        <h3>Preço: @roupa.PrecoRoupa.ToString("c")</h3>
+    </div>
+}

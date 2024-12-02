@@ -3,8 +3,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ApplicationMVC.Models
 {
+    [Table("G2_CATEGORIAS")]
     public class Categoria
     {
+        [Key]
         [Column("ID_CATEGORIA")]
         public Guid CategoriaId { get; set; }
 
