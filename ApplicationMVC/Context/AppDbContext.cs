@@ -9,7 +9,7 @@ namespace ApplicationMVC.Context
         { 
         }
 
-        public DbSet<Categoria> G2_CATEGORIAS { get; set; }
-        public DbSet<Roupa> G2_ROUPAS { get; set; }
+        public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Roupa> Roupas { get; set; }
     }
 }
