@@ -9,7 +9,7 @@ namespace ApplicationMVC.Models
     {
         [Key]
         [Column("ID_ROUPA")]
-        public int RoupaId { get; set; }
+        public Guid RoupaId { get; set; }
 
         [Required(ErrorMessage = "Informe o nome da roupa")]
         [StringLength(80, MinimumLength = 10, ErrorMessage = "O {0} deve ter no mínimo {1} e no máximo {2} caracteres")]
@@ -46,7 +46,7 @@ namespace ApplicationMVC.Models
 
         [ForeignKey("G2_CATEGORIAS")]
         [Column("ID_CATEGORIA")]
-        public int CategoriaId { get; set; }
+        public Guid CategoriaId { get; set; }
 
         public Categoria Categoria { get; set; }
     }

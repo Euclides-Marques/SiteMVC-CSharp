@@ -6,7 +6,7 @@ namespace ApplicationMVC.Models
     public class Categoria
     {
         [Column("ID_CATEGORIA")]
-        public int CategoriaId { get; set; }
+        public Guid CategoriaId { get; set; }
 
         [Required(ErrorMessage = "Informe o nome da categoria")]
         [StringLength(100, ErrorMessage = "O tamanho máximo é {1} caracteres")]
