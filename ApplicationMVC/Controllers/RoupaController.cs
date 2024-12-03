@@ -1,4 +1,5 @@
 ﻿using ApplicationMVC.Repositories.Interfaces;
+using ApplicationMVC.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApplicationMVC.Controllers
@@ -14,8 +15,13 @@ namespace ApplicationMVC.Controllers
 
         public IActionResult List()
         {
-            var roupas = _roupaRepository.Roupas;
-            return View(roupas);
+            //var roupas = _roupaRepository.Roupas;
+            //return View(roupas);
+
+            var roupasListViewModel = new RoupaListViewModel();
+            roupasListViewModel.Roupas = _roupaRepository.Roupas;
+            roupasListViewModel.CategoriaAtual = "Categoria Atual";
+            return View(roupasListViewModel);
         }
     }
 }
